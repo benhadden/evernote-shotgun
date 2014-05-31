@@ -4,8 +4,8 @@ from evernote.api.client import NoteStore
 import sys, getopt, os, re, time
 from pprint import pprint
 
-import lib.ENML_PY as enml
-import lib.html2text as html2text
+import ENML_PY as enml
+import html2text
 
 from shotgun_api3 import Shotgun
 
