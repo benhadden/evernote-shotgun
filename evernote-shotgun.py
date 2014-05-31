@@ -137,7 +137,7 @@ def main(notebookName):
     #Put your Shotgun script details here
     sg = Shotgun('https://yourSiteName.shotgunstudio.com','shotgun-evernote','yourScriptKey')
     
-    #Put your Shotgun user id details here
+    #Put the Shotgun HumanUser ID here for the person you want to appear as the Note's author in Shotgun
     sgUserId = 42
     
     sgUser = sg.find_one("HumanUser",[['id', 'is', sgUserId]])

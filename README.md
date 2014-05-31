@@ -9,6 +9,11 @@ Upload any Evernote Notebook and all its notes and attachments to a Shotgun Proj
 * Evernote account
 * Python v2.7
 
+## Installation
+
+* Download the master branch
+* Input your Evernote Developer key, Shotgun server / script info, and Shotgun User ID to the evernote-shotgun.py file.
+
 ## Usage
 
     python evernote-shotgun '[Shotgun Project Name]'
