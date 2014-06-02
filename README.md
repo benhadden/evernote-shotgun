@@ -8,6 +8,7 @@ Upload any Evernote Notebook and all its notes and attachments to a Shotgun Proj
 * Shotgun server
 * Evernote account
 * Python v2.7
+* oauth2
 
 ## Installation
 
