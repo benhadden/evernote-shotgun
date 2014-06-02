@@ -5,7 +5,7 @@ import sys, getopt, os, re, time
 from pprint import pprint
 
 import ENML_PY as enml
-import html2text
+from html2text import html2text
 
 from shotgun_api3 import Shotgun
 
@@ -88,7 +88,7 @@ def processNotes(noteStore, notebookName, notes, sg, sgUser):
         print('\nGetting note data for {0}'.format(noteMetadata.guid))
         contentENML = noteStore.getNoteContent(noteMetadata.guid, True, False, False, False)
         contentHTML = enml.ENMLToHTML(contentENML)
-        contentTEXT = html2text.html2text(contentENML.decode('utf-8'))
+        contentTEXT = html2text.html2text(contentHTML.decode('utf-8'))
         contentTEXT = re.sub(r' *\n', os.linesep, contentTEXT)
         
         #Gather the required data for the Shotgun note
@@ -132,13 +132,13 @@ def processNotebook(noteStore, notebook, sg, sgUser):
 def main(notebookName):
     
     #Get your developer token here: https://www.evernote.com/api/DeveloperToken.action and put it here
-    dev_token = ''
+    dev_token = 'yourEvernoteDevKey'
     
     #Put your Shotgun script details here
-    sg = Shotgun('https://yourSiteName.shotgunstudio.com','shotgun-evernote','yourScriptKey')
+    sg = Shotgun('https://yourSite.shotgunstudio.com','evernote-shotgun','yourScriptKey')
     
     #Put the Shotgun HumanUser ID here for the person you want to appear as the Note's author in Shotgun
-    sgUserId = 42
+    sgUserId = 45
     
     sgUser = sg.find_one("HumanUser",[['id', 'is', sgUserId]])
 
