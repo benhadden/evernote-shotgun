@@ -8,7 +8,14 @@ Upload any Evernote Notebook and all its notes and attachments to a Shotgun Proj
 * Shotgun server
 * Evernote account
 * Python v2.7
+
+## Required Python Libraries
+
+These can be installed using [pip](https://pip.pypa.io/en/latest/installing.html).
+
 * oauth2
+* thrift
+* beautifulsoup4
 
 ## Installation
 
