@@ -14,7 +14,6 @@ Upload any Evernote Notebook and all its notes and attachments to a Shotgun Proj
 These can be installed using [pip](https://pip.pypa.io/en/latest/installing.html).
 
 * oauth2
-* thrift
 * beautifulsoup4
 
 ## Installation
@@ -29,5 +28,5 @@ These can be installed using [pip](https://pip.pypa.io/en/latest/installing.html
 ## Documentation
 
 * Shotgun Project must already exist and exactly match the name of your Evernote Notebook (case sensitive)
-* Evernote Tags are used to link Notes to Shotgun entities following this syntax: EntityType:EntityName (e.g. Asset:Squirrel or Shot:001_010)
+* Evernote Tags are used to link Notes to Shotgun entities following this syntax: entityType:EntityName (e.g. asset:Squirrel or shot:001_010)
 * Once you run the script, each uploaded Note will receive an 'sgSynced' Tag in Evernote, which tells the script to ignore the note if you run the script again
